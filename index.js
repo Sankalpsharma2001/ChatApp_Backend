@@ -15,7 +15,7 @@ app.use(express.json());
 //     res.sendFile(path.join(__dirname, 'build', 'index.html'));
 // });
 
-mongoose.connect("mongodb://0.0.0.0:27017/chat",{useNewUrlParser:true}).then(()=>{
+mongoose.connect(process.env.REACT_APP_BACKEND_URL,{useNewUrlParser:true}).then(()=>{
     console.log("DB connection succesfully");
 }).catch((err)=>{
     console.log(err.message);
