@@ -42,8 +42,8 @@ const server = app.listen(PORT, () =>
 );
 const io = socket(server, {
   cors: {
-    // origin: "http://localhost:3000",
-    origin:process.env.REACT_APP_BACKEND_URL,
+    origin: "http://localhost:3000",
+    // origin:process.env.REACT_APP_BACKEND_URL,
     credentials: true,
   },
 });
