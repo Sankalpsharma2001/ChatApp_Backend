@@ -47,7 +47,8 @@ const io = socket(server, {
     credentials: true,
   },
 });
-
+ 
+// store all online users 
 global.onlineUsers = new Map();
 io.on("connection", (socket) => {
   global.chatSocket = socket;
